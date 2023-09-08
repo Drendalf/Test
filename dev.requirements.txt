@@ -1,0 +1,4 @@
+-r src/requirements.txt
+
+pre-commit==3.3.3
+python-dotenv==1.0.0

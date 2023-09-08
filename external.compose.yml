@@ -1,0 +1,15 @@
+services:
+  postgres:
+    container_name: postgresdb
+    image: postgres:dev
+    env_file:
+      - ./external/postgres/db.env
+    ports:
+      - "127.0.0.1:5432:5432"
+    networks:
+      - test
+    logging:
+      driver: none
+networks:
+  test:
+    driver: bridge

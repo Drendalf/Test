@@ -1,0 +1,12 @@
+services:
+  test:
+    container_name: test
+    image: test:dev
+    env_file:
+      - dev.env
+    ports:
+      - "127.0.0.1:6006:6006"
+    depends_on:
+      - postgres
+    networks:
+      - test
